@@ -1,3 +1,9 @@
+:root {
+    --cor-de-fundo-light-mode: #eceff1;
+    --cor-de-fundo-dark-mode: #263238;
+    --cor-texto-dark-mode: #fff;
+}
+
 * {
     font-family: Helvetica;
     padding: 0;
@@ -5,12 +11,69 @@
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     height: 100%;
-    background: #eceff1;
+    background: var(--cor-de-fundo-light-mode);
     transition: 0.3s;
 }
 
 input[type="checkbox"] {
     display: none;
+}
+
+.bi {
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.bi-moon {
+    display: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--cor-de-fundo-light-mode);
+    box-shadow: 0.5px 0.5px 10px 0.5px #000;
+    padding: 1rem 2rem;
+    position: relative;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    margin-top: 4rem;
+    display: flex;
+    width: 60%;
+    background-color: #fff;
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+.card-image {
+    padding: 2rem;
+    width: 50%;
+    position: relative;
+    background-color: #eff7fc;
+}
+
+.card-image span {
+    font-size: 6rem;
+    font-weight: 900;
+}
+
+.card img {
+    width: 130%;
+    transform: rotate(-25deg);
+}
+
+/* Dark Theme */
+.dark,
+.dark header {
+    background-color: var(--cor-de-fundo-dark-mode);
+    color: var(--cor-texto-dark-mode);
 }
